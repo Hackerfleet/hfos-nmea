@@ -46,7 +46,7 @@ This software package is a plugin module for HFOS.
           'libais==0.16',
           'pyserial>=3.1.1'
       ],
-      entry_points="""[hfos.components]
+      entry_points="""[isomer.components]
     nmeaparser=hfos.nmea.nmea:NMEAParser
     aisparser=hfos.nmea.ais:AISParser
     """,

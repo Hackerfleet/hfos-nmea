@@ -32,10 +32,10 @@ Module NMEA
 
 import ais
 from circuits import Event
-from hfos.navdata.bus import register_protocol
+from isomer.navdata.bus import register_protocol
 
-from hfos.component import ConfigurableComponent
-from hfos.logger import verbose, warn
+from isomer.component import ConfigurableComponent
+from isomer.logger import verbose, warn
 
 
 # from pprint import pprint

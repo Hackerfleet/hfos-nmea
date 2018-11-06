@@ -32,10 +32,10 @@ Module NMEA
 
 
 from decimal import Decimal
-from hfos.component import ConfigurableComponent, handler
-from hfos.logger import hfoslog, events, verbose, debug, warn, critical, error, hilight
-from hfos.navdata.events import sensordata
-from hfos.navdata.bus import register_protocol
+from isomer.component import ConfigurableComponent, handler
+from isomer.logger import isolog, events, verbose, debug, warn, critical, error, hilight
+from isomer.navdata.events import sensordata
+from isomer.navdata.bus import register_protocol
 
 from pprint import pprint
 
@@ -44,8 +44,8 @@ try:
     from pynmea2 import parse
 except ImportError:
     parse = None
-    hfoslog("No pynmea found, install requirements-optional.txt", lvl=warn,
-            emitter="NMEA")
+    isolog("No pynmea found, install requirements-optional.txt", lvl=warn,
+           emitter="NMEA")
 
 
 class NMEAParser(ConfigurableComponent):

@@ -3,7 +3,7 @@
 
 # HFOS - Hackerfleet Operating System
 # ===================================
-# Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
+# Copyright (C) 2011-2019 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -30,7 +30,6 @@ Module NMEA
 
 """
 
-
 from decimal import Decimal
 from isomer.component import ConfigurableComponent, handler
 from isomer.logger import isolog, events, verbose, debug, warn, critical, error, hilight
@@ -38,7 +37,6 @@ from isomer.navdata.events import sensordata
 from isomer.navdata.bus import register_protocol
 
 from pprint import pprint
-
 
 try:
     from pynmea2 import parse
@@ -133,4 +131,3 @@ class NMEAParser(ConfigurableComponent):
                            "navdata")
             # self.log("Unhandled data: \n", self.unparsable, "\n",
             # self.unhandled, lvl=warn)
-
